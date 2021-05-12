@@ -12,6 +12,7 @@
 .container {
   display: flex;
   width: 990px;
+  justify-content: space-between;
 }
 .header {
   display: flex;
@@ -21,6 +22,7 @@
   padding-left: 15px;
   padding-right: 15px;
   background-color: #ffffff;
+  margin-bottom: 15px;
 }
 .content {
   display: flex;
@@ -58,7 +60,9 @@
   border: 0px;
   background-color: #edeef0;
   border-radius: 5px;
+  outline-style: none;
 }
+
 .notification {
   width: 48px;
   height: 48px;
@@ -116,4 +120,16 @@ a > img {
   padding-right: 5px;
   width: 32px;
   height: 32px;
+}
+.leftCol {
+  width: 230px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #e7e8ec;
+}
+.rightCol {
+  width: 550px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #e7e8ec;
 }
