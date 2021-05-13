@@ -1,0 +1,36 @@
+.dialogsList {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #e7e8ec;
+}
+.dialogsContainer {
+  display: flex;
+  flex-direction: column;
+  max-height: 50vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.searchDialogs {
+  display: flex;
+  width: auto;
+  height: 48px;
+  border-bottom: 1px solid #e7e8ec;
+}
+.dialogInfo {
+  display: flex;
+  width: auto;
+  height: 71px;
+  border-bottom: 1px solid #e7e8ec;
+}
+.dialogsListFooter {
+  display: flex;
+  width: auto;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #e7e8ec;
+  font-size: 13px;
+}
