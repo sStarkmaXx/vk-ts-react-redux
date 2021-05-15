@@ -13,12 +13,14 @@
   display: flex;
   width: 990px;
   justify-content: space-between;
+  justify-self: center;
 }
 
 .content {
   display: flex;
-  justify-content: center;
-  flex: 1 1 auto;
+  margin: 0 auto;
+  width: 990px;
+  flex-grow: 1;
 }
 .footer {
   display: flex;

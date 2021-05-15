@@ -7,8 +7,8 @@ export const ProfilePage = () => {
     <>
       <Header />
       <div className={classes.content}>
+        <Navbar />
         <div className={classes.container}>
-          <Navbar />
           <div className={classes.leftCol}></div>
           <div className={classes.rightCol}></div>
         </div>

@@ -9,7 +9,7 @@
 .dialogsContainer {
   display: flex;
   flex-direction: column;
-  max-height: 50vh;
+  height: 83vh;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -19,12 +19,7 @@
   height: 48px;
   border-bottom: 1px solid #e7e8ec;
 }
-.dialogInfo {
-  display: flex;
-  width: auto;
-  height: 71px;
-  border-bottom: 1px solid #e7e8ec;
-}
+
 .dialogsListFooter {
   display: flex;
   width: auto;

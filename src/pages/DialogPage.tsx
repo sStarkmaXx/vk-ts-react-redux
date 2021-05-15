@@ -2,79 +2,34 @@ import { Header } from '../components/Header/Header';
 import { Navbar } from '../components/Navbar/Navbar';
 import classes from '../App.module.css';
 import css from './DialogPage.module.css';
+import { DialogPrev } from '../components/Dialogs/DialogPrev';
+import { DialogType } from '../redux/state';
 
-export const DialogPage = () => {
+type PropsType = {
+  dialogs: Array<DialogType>;
+};
+
+export const DialogPage: React.FC<PropsType> = (props) => {
+  let dialogs = props.dialogs.map((dialog) => {
+    let lastMessage = dialog.messages[dialog.messages.length - 1];
+    return (
+      <DialogPrev
+        key={dialog.id}
+        profileName={dialog.name}
+        lastMessage={lastMessage.message}
+        profileImg={dialog.profileImg}
+      />
+    );
+  });
   return (
     <>
       <Header />
       <div className={classes.content}>
+        <Navbar />
         <div className={classes.container}>
-          <Navbar />
           <div className={css.dialogsList}>
             <div className={css.searchDialogs}></div>
-            <div className={css.dialogsContainer}>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-              <div className={css.dialogInfo}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                odio natus? Perspiciatis, fuga at dicta aliquid ex dolorum. Esse
-                placeat non nemo odio aliquid provident doloremque perspiciatis
-                sint reiciendis soluta.
-              </div>
-            </div>
-
+            <div className={css.dialogsContainer}>{dialogs}</div>
             <div className={css.dialogsListFooter}>
               <span>Отключить звуковые уведомления</span>
             </div>
