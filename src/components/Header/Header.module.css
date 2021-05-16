@@ -65,13 +65,18 @@
   justify-self: left;
   justify-content: center;
   align-items: center;
+  font-size: 13px;
+  font-weight: bolder;
 }
 .profImg {
+  display: flex;
   width: 40px;
   height: 40px;
   margin: 0 5px;
   border-radius: 50%;
-  background-color: #1d1d1e;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header img {

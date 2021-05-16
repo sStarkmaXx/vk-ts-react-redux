@@ -8,6 +8,9 @@ import menuHeader from '../../icons/menuHeader.png';
 import search from '../../icons/search.png';
 
 export const Header = () => {
+  let a =
+    'https://sun9-66.userapi.com/impg/m7RidxNg9emTxuj-6y8wl_kg9-tI8lew1H46Vg/txbBAzSr2Ok.jpg?size=1623x2160&quality=96&sign=d03e2fb7a22ca2a7751f8641203ffa02&type=album';
+  let url = `url(${a})`;
   return (
     <div className={classes.header}>
       <div className={c.container}>
@@ -16,7 +19,11 @@ export const Header = () => {
         </div>
         <div className={classes.search}>
           <img src={search} alt="" />
-          <input className={classes.inputSearch} type="text"></input>
+          <input
+            className={classes.inputSearch}
+            type="text"
+            placeholder="Поиск"
+          ></input>
         </div>
         <div className={classes.notification}>
           <img src={notificationHeader} alt="" />
@@ -26,8 +33,11 @@ export const Header = () => {
         </div>
         <div className={classes.player}></div>
         <div className={classes.profileMenu}>
-          <div className={classes.name}>Max</div>
-          <div className={classes.profImg}></div>
+          <div className={classes.name}>Макс</div>
+          <div
+            className={classes.profImg}
+            style={{ backgroundImage: url }}
+          ></div>
           <div className={classes.hedProfMenu}>
             <img src={menuHeader} alt="" />
           </div>

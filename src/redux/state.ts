@@ -3,6 +3,8 @@ import { v1 } from 'uuid';
 let dimych =
   'https://sun4-11.userapi.com/s/v1/if1/WKIru_JWpP_NC33uxlLNSzN_FCVYF2ATJmiCUPBesjXHmmhm6r9zUDFCO0ewZ2F-RZC9qFYz.jpg?size=50x0&quality=96&crop=322,289,1006,1006&ava=1';
 let tony = 'https://www.kinonews.ru/insimgs/2018/newsimg/newsimg84151.jpg';
+let durov =
+  'https://sun9-75.userapi.com/impg/c854428/v854428049/1782ce/glu56v7fNZY.jpg?size=1080x1080&quality=96&sign=e7187148d910b095886e7e7039292e83&type=album';
 
 export type MessageType = {
   id: string;
@@ -63,9 +65,12 @@ export let state: StateType = {
       },
       {
         id: v1(),
-        name: 'Tony',
-        profileImg: tony,
-        messages: [{ id: v1(), message: 'Hello, its Tony' }],
+        name: 'Павел Дуров',
+        profileImg: durov,
+        messages: [
+          { id: v1(), message: 'Здарова Макс!' },
+          { id: v1(), message: 'Давай ко мне в команду!нужен хороший разраб.' },
+        ],
       },
     ],
   },
