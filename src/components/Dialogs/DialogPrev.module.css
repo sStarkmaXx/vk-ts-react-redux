@@ -30,6 +30,7 @@
   display: flex;
   align-items: center;
   width: 400px;
+  height: 30px;
   font-weight: bolder;
 }
 .dialogTime {
@@ -40,5 +41,7 @@
 }
 .dialogTextPrev {
   display: flex;
-  align-items: center;
+  height: 20px;
+  width: 400px;
+  overflow: hidden;
 }

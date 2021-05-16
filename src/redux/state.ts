@@ -34,6 +34,11 @@ export let state: StateType = {
           { id: v1(), message: 'Hello' },
           { id: v1(), message: 'Samurai' },
           { id: v1(), message: 'We are can fly!!!' },
+          {
+            id: v1(),
+            message:
+              'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et ipsum, totam numquam, unde sint blanditiis consequuntur consequatur animi commodi distinctio dolores veritatis facere similique officiis vel in accusantium beatae sunt.',
+          },
         ],
       },
       {
