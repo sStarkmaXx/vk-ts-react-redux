@@ -11,6 +11,7 @@ function App() {
     <div className={classes.App}>
       <Route exact path={'/'} render={() => <ProfilePage />} />
       <Route
+        exact
         path={'/dialogs'}
         render={() => <DialogPage dialogs={dialogs} />}
       />

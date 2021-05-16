@@ -1,14 +1,14 @@
 import css from './DialogPrev.module.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-type PropsType = {
+type DialogPrevPropsType = {
   key: string;
   profileName: string;
   lastMessage: string;
   profileImg: string;
 };
 
-export const DialogPrev: React.FC<PropsType> = (props) => {
+export const DialogPrev: React.FC<DialogPrevPropsType> = (props) => {
   let url = `url(${props.profileImg})`;
   let path = `/dialogs/${props.profileName}`;
   return (

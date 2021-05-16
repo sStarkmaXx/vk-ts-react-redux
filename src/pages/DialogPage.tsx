@@ -2,39 +2,55 @@ import { Header } from '../components/Header/Header';
 import { Navbar } from '../components/Navbar/Navbar';
 import classes from '../App.module.css';
 import css from './DialogPage.module.css';
-import { DialogPrev } from '../components/Dialogs/DialogPrev';
 import { DialogType } from '../redux/state';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
+import { DialogsList } from '../components/Dialogs/DialogsList';
+import { MessagesPage } from './MessagesPage';
 
-type PropsType = {
+type DualogPagePropsType = {
   dialogs: Array<DialogType>;
 };
 
-export const DialogPage: React.FC<PropsType> = (props) => {
-  let dialogs = props.dialogs.map((dialog) => {
-    let lastMessage = dialog.messages[dialog.messages.length - 1];
+export const DialogPage: React.FC<DualogPagePropsType> = (props) => {
+  let route = props.dialogs.map((dialog) => {
+    let path = `/dialogs/${dialog.name}`;
     return (
-      <DialogPrev
-        key={dialog.id}
-        profileName={dialog.name}
-        lastMessage={lastMessage.message}
-        profileImg={dialog.profileImg}
-      />
+      <Route
+        path={path}
+        render={() => (
+          <MessagesPage
+            key={dialog.id}
+            messages={dialog.messages}
+            profileName={dialog.name}
+            profileImg={dialog.profileImg}
+          />
+        )}
+      ></Route>
     );
   });
+  debugger;
   return (
     <>
       <Header />
       <div className={classes.content}>
         <Navbar />
         <div className={classes.container}>
-          <div className={css.dialogsList}>
-            <div className={css.searchDialogs}></div>
-            <div className={css.dialogsContainer}>{dialogs}</div>
-            <div className={css.dialogsListFooter}>
-              <span>Отключить звуковые уведомления</span>
-            </div>
-          </div>
+          <Route
+            path={'/dialogs'}
+            render={() => <DialogsList dialogs={props.dialogs} />}
+          ></Route>
+          {route}
+          <Route
+            path={'/dialogs/Dimych'}
+            render={() => (
+              <MessagesPage
+                key={props.dialogs[0].id}
+                messages={props.dialogs[0].messages}
+                profileName={props.dialogs[0].name}
+                profileImg={props.dialogs[0].profileImg}
+              />
+            )}
+          ></Route>
           <div className={css.rightDialogMenu}>
             <div className={css.menuWrap}>
               <NavLink to={'/dialogs'}>Все чаты</NavLink>
