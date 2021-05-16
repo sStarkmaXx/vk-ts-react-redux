@@ -16,7 +16,7 @@
 .dialogsContainer {
   display: flex;
   flex-direction: column;
-  height: 83vh;
+  height: 80vh;
   overflow: scroll;
   overflow-x: hidden;
 }

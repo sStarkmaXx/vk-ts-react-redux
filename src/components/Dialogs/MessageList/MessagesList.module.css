@@ -1,0 +1,78 @@
+.dialogsList {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #e7e8ec;
+}
+.chatHeader {
+  display: flex;
+  width: auto;
+  height: 48px;
+  border-bottom: 1px solid #e7e8ec;
+}
+.chatHeader a {
+  display: flex;
+  width: 133px;
+  text-decoration: none;
+  color: #818c99;
+  align-items: center;
+  padding-left: 15px;
+}
+.dialogsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.dialogName {
+  display: flex;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  color: #1d1d1e;
+  font-size: 13px;
+  font-weight: bolder;
+}
+.chatInput {
+  display: flex;
+  max-height: 62px;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid #e7e8ec;
+  background-color: #fafbfc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.addItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+}
+.addItem img {
+  width: 42px;
+  height: 42px;
+}
+.input {
+  width: 300px;
+  height: 42px;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #dce1e6;
+}
+.sendMessage {
+  display: flex;
+  width: 62px;
+  height: 62px;
+  align-items: center;
+  justify-content: center;
+}
+.sendMessage img {
+  display: flex;
+  width: 42px;
+  height: 42px;
+}

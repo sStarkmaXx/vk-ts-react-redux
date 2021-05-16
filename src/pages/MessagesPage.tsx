@@ -4,7 +4,7 @@ import classes from '../App.module.css';
 import css from './DialogPage.module.css';
 import { MessageType } from '../redux/state';
 import { NavLink } from 'react-router-dom';
-import { MessagesList } from '../components/Dialogs/MessagesList';
+import { MessagesList } from '../components/Dialogs/MessageList/MessagesList';
 
 type MessagesPagePropsType = {
   messages: Array<MessageType>;

@@ -18,7 +18,7 @@
   display: flex;
   padding-left: 10px;
   flex-grow: 1;
-  width: 200px;
+  width: 187px;
   text-decoration: none;
   align-items: center;
   font-size: 13px;
@@ -40,4 +40,10 @@
   font-size: 13px;
   height: 31px;
   padding-left: 13px;
+}
+.active {
+  display: flex;
+  width: 200px;
+  background-color: #e5e7ea;
+  border-left: 3px solid #9fa0a0;
 }

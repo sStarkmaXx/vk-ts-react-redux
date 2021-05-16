@@ -1,4 +1,4 @@
-import css from './DialogPrev.module.css';
+import css from './Message.module.css';
 import React from 'react';
 
 type MessagePropsType = {
@@ -18,7 +18,7 @@ export const Message: React.FC<MessagePropsType> = (props) => {
       <div className={css.dialogDetail}>
         <div className={css.dialogName}>{props.profileName}</div>
         <div className={css.dialogTime}>19:21</div>
-        <div className={css.dialogTextPrev}>{props.message}</div>
+        <div className={css.messageText}>{props.message}</div>
       </div>
     </div>
   );

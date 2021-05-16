@@ -1,7 +1,7 @@
 import { DialogPrev } from './DialogPrev';
 import css from './DialogsList.module.css';
 import React from 'react';
-import { DialogType } from '../../redux/state';
+import { DialogType } from '../../../redux/state';
 
 type DialogsListPropsType = {
   dialogs: Array<DialogType>;
