@@ -1,14 +1,14 @@
 .dialogInfo {
   display: flex;
   width: auto;
-  min-height: 80px;
-  padding-bottom: 10px;
+  flex-grow: 1;
+  padding: 10px 0;
 }
 .dialogDetail {
   display: flex;
   flex-wrap: wrap;
   width: 450px;
-  height: 70;
+  min-height: 70px;
   font-size: 13px;
 }
 .dialogImg {
@@ -44,4 +44,5 @@
   display: flex;
   width: 390px;
   padding-left: 10px;
+  flex-grow: 1;
 }

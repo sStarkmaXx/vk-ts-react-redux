@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 550px;
+  height: calc(100vh - 78px);
   background-color: white;
   border-radius: 5px;
   border: 1px solid #e7e8ec;
@@ -9,7 +10,7 @@
 .chatHeader {
   display: flex;
   width: auto;
-  height: 48px;
+  min-height: 48px;
   border-bottom: 1px solid #e7e8ec;
 }
 .chatHeader a {
@@ -23,7 +24,7 @@
 .dialogsContainer {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  flex-grow: 1;
   overflow: scroll;
   overflow-x: hidden;
 }

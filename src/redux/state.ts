@@ -39,6 +39,16 @@ export let state: StateType = {
             message:
               'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et ipsum, totam numquam, unde sint blanditiis consequuntur consequatur animi commodi distinctio dolores veritatis facere similique officiis vel in accusantium beatae sunt.',
           },
+          {
+            id: v1(),
+            message:
+              'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et ipsum, totam numquam, unde sint blanditiis consequuntur consequatur animi commodi distinctio dolores veritatis facere similique officiis vel in accusantium beatae sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et ipsum, totam numquam, unde sint blanditiis consequuntur consequatur animi commodi distinctio dolores veritatis facere similique officiis vel in accusantium beatae sunt.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et ipsum, totam numquam, unde sint blanditiis consequuntur consequatur animi commodi distinctio dolores veritatis facere similique officiis vel in accusantium beatae sunt.',
+          },
+          {
+            id: v1(),
+            message:
+              'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et ipsum, totam numquam, unde sint blanditiis consequuntur consequatur animi commodi distinctio dolores veritatis facere similique officiis vel in accusantium beatae sunt.',
+          },
         ],
       },
       {
@@ -50,6 +60,12 @@ export let state: StateType = {
           { id: v1(), message: 'Im Iron Man' },
           { id: v1(), message: 'Do you want to be like me?' },
         ],
+      },
+      {
+        id: v1(),
+        name: 'Tony',
+        profileImg: tony,
+        messages: [{ id: v1(), message: 'Hello, its Tony' }],
       },
     ],
   },
